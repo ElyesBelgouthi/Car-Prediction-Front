@@ -276,6 +276,55 @@ const upholsteries = [
   "Tissu",
   "Velours",
 ];
+const exterior_colors = [
+  "Aubergine",
+  "Autre",
+  "Beige",
+  "Blanc",
+  "Bleu",
+  "Gris anthracite",
+  "Gris argent",
+  "Gris shark",
+  "Jaune",
+  "Marron",
+  "Noir",
+  "Orange",
+  "Rouge",
+  "Vert",
+];
+
+const interior_colors = [
+  "Autre",
+  "Beige",
+  "Gris",
+  "Marron",
+  "Nan",
+  "Noir",
+  "Rouge",
+];
+
+const locations = [
+  "Ariana",
+  "Ben Arous",
+  "Bizerte",
+  "Béja",
+  "Gabès",
+  "Gafsa",
+  "Jendouba",
+  "Kairouan",
+  "Kasserine",
+  "La Manouba",
+  "Le Kef",
+  "Mahdia",
+  "Monastir",
+  "Médenine",
+  "Nabeul",
+  "Sfax",
+  "Sidi Bouzid",
+  "Sousse",
+  "Tataouine",
+  "Tunis",
+];
 
 function App() {
   const [formData, setFormData] = useState({
@@ -350,6 +399,21 @@ function App() {
           { label: "Énergie", name: "fuel", options: fuels },
           { label: "Boite vitesse", name: "gearbox", options: gearboxes },
           { label: "Sellerie", name: "upholstery", options: upholsteries },
+          {
+            label: "Couleur Extérieur",
+            name: "exterior_color",
+            options: exterior_colors,
+          },
+          {
+            label: "Couleur Interieur",
+            name: "interior_color",
+            options: interior_colors,
+          },
+          {
+            label: "Gouvernorat",
+            name: "location",
+            options: locations,
+          },
         ].map(({ label, name, type, options }) => (
           <div className="form-group" key={name}>
             <label>{label}:</label>
